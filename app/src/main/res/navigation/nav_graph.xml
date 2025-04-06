@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/teamSelectionFragment">
+
+    <fragment
+        android:id="@+id/teamSelectionFragment"
+        android:name="com.android.mr.worldt2.ui.TeamSelectionFragment"
+        android:label="Select Teams">
+        <action
+            android:id="@+id/action_teamSelectionFragment_to_matchFragment"
+            app:destination="@id/matchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.android.mr.worldt2.ui.MatchFragment"
+        android:label="Match Centre">
+        <argument
+            android:name="team1"
+            app:argType="com.android.mr.worldt2.data.Team" />
+        <argument
+            android:name="team2"
+            app:argType="com.android.mr.worldt2.data.Team" />
+    </fragment>
+
+
+</navigation>
